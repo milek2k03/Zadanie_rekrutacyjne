@@ -10,7 +10,7 @@ public class PlayerBaker : Baker<PlayerMono>
 {
 	public override void Bake(PlayerMono authoring)
 	{
-		Player player = new Player { PlayerLevel = authoring.PlayerLevel };
-		AddComponent(player);
+		//Player player = new Player { PlayerLevel = authoring.PlayerLevel };
+		AddComponent(GetEntity(TransformUsageFlags.Dynamic), new Player());
 	}
 }

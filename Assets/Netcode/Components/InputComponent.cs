@@ -1,18 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Unity.NetCode;
 
-public class InputComponent : MonoBehaviour
+[GhostComponent(PrefabType = GhostPrefabType.AllPredicted)]
+public struct InputComponent : IInputComponentData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int Horizontal;
+    public int Vertical;
 }
